@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-wm-green: #006937;
+  --color-wm-green-light: #0a854b;
+  --color-wm-gold: #ffc72c;
+  --color-wm-gold-dark: #d6a400;
+  --color-wm-lime: #84bd00;
+  --color-wm-dark: #12321f;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", "Inter", sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--font-sans); color: #25322a; background: white; }
+  button, a, select { cursor: pointer; }
+}
+
+@layer components {
+  .section-shell { @apply mx-auto w-full max-w-[1440px] px-5 lg:px-10; }
+  .nav-link { @apply rounded-md px-4 py-3 text-sm font-bold text-slate-600 transition hover:bg-[#edf4eb] hover:text-wm-green; }
+  .nav-link-active { @apply bg-[#edf4eb] text-wm-green; }
+  .mobile-link { @apply block w-full border-b border-slate-100 px-2 py-3 text-left font-bold text-wm-dark; }
+  .mobile-heading { @apply mt-4 px-2 text-xs font-black uppercase tracking-[.16em] text-wm-green; }
+  .mobile-sub-link { @apply block w-full px-4 py-2.5 text-left text-sm font-semibold text-slate-600; }
+  .dropdown-wrap { @apply absolute left-1/2 top-full -translate-x-1/2 pt-3; }
+  .dropdown-card { @apply rounded-xl border border-slate-200 bg-white p-3 shadow-lg; }
+  .eyebrow { @apply inline-block text-xs font-black uppercase tracking-[.2em] text-wm-green; }
+  .eyebrow-light { @apply text-wm-gold; }
+  .section-title { @apply mt-4 font-display text-4xl font-black leading-tight text-wm-dark sm:text-5xl; }
+  .section-copy { @apply mt-5 text-base leading-7 text-slate-600; }
+  .primary-cta { @apply inline-flex items-center gap-2 rounded-md bg-wm-gold px-6 py-3.5 text-sm font-extrabold text-wm-dark transition hover:-translate-y-0.5 hover:shadow-lg; }
+  .primary-cta svg { @apply h-4 w-4; }
+  .secondary-cta-light { @apply rounded-md border border-white/60 bg-white/10 px-6 py-3.5 text-sm font-extrabold text-white backdrop-blur transition hover:bg-white/20; }
+  .secondary-cta { @apply rounded-md border border-wm-green bg-white px-6 py-3.5 text-sm font-extrabold text-wm-green transition hover:bg-[#edf4eb]; }
+  .check-line { @apply flex items-start gap-2 font-semibold text-slate-700; }
+  .check-line svg { @apply mt-0.5 h-4 w-4 shrink-0 text-wm-green; }
+  .spec-grid { @apply mt-8 grid gap-4 sm:grid-cols-2; }
+  .spec-card { @apply rounded-xl border border-slate-200 bg-white p-5; }
+  .spec-card h3 { @apply text-xs font-black uppercase tracking-[.12em] text-wm-green; }
+  .spec-card p { @apply mt-2 text-sm leading-6 text-slate-600; }
+  .scale-image { @apply h-72 w-full rounded-xl bg-white object-contain p-3 shadow-sm; }
+  .footer-title { @apply mb-4 text-xs font-black uppercase tracking-[.18em] text-wm-green; }
+  .footer-link { @apply mb-2 block text-left text-sm text-slate-500 transition hover:text-wm-green; }
+  .footer-contact { @apply mb-3 flex items-start gap-2 text-sm text-slate-500; }
+  .footer-contact svg { @apply h-4 w-4 shrink-0 text-wm-green; }
+  .form-field { @apply text-xs font-extrabold uppercase tracking-[.08em] text-wm-dark; }
+  .form-field input, .form-field select, .form-field textarea { @apply mt-2 w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-sm font-medium normal-case tracking-normal text-slate-800 outline-none transition focus:border-wm-green focus:ring-2 focus:ring-wm-green/15; }
+}
