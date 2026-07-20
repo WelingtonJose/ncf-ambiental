@@ -3,6 +3,8 @@ node_modules/
 build/
 dist/
 out/
+artifacts/
+.edge-test-profile/
 coverage/
 *.tsbuildinfo
 .DS_Store

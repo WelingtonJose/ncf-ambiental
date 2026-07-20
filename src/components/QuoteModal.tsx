@@ -29,12 +29,12 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-[#041b10]/75 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-[#041b10]/75 p-3 backdrop-blur-sm sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-label="Solicitar atendimento"
     >
-      <div className="relative max-h-[92vh] w-full max-w-xl overflow-auto rounded-2xl bg-white p-7 shadow-2xl sm:p-9">
+      <div className="relative max-h-[calc(100dvh-1.5rem)] w-full max-w-xl overflow-auto rounded-2xl bg-white p-5 shadow-2xl sm:max-h-[92vh] sm:p-9">
         <button
           onClick={onClose}
           className="absolute right-5 top-5 rounded-full bg-slate-100 p-2 text-slate-600"

@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <section className="bg-[#f3f7f1]">
-        <div className="section-shell grid min-h-[500px] items-center gap-10 py-16 lg:grid-cols-2">
+        <div className="section-shell grid items-center gap-10 py-12 sm:py-16 lg:min-h-[500px] lg:grid-cols-2">
           <div>
             <span className="eyebrow">Solução por setor</span>
             <h1 className="section-title">{sector.title}</h1>
@@ -38,7 +38,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </QuoteButton>
             </div>
           </div>
-          <div className="relative min-h-[300px] overflow-hidden rounded-3xl bg-white shadow-sm">
+          <div className="relative min-h-[260px] overflow-hidden rounded-3xl bg-white shadow-sm sm:min-h-[300px]">
             <Image
               src={image.src}
               alt={image.alt}

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { corporateServices, residentialItems } from "@/data/navigation";
 import logo from "@/assets/images/logo.png";
 
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-[#f7f9f6] text-slate-700">
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-14 md:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-12 sm:grid-cols-2 sm:px-6 sm:py-14 lg:grid-cols-4 lg:px-10">
         <div>
           <Image src={logo} alt="NCF Ambiental" className="h-16 w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-6 text-slate-500">
@@ -15,27 +16,19 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="footer-title">Residencial</h3>
-          <Link href="/residencial/coleta-residencial" className="footer-link">
-            Coleta particular
-          </Link>
-          <Link href="/residencial/lixeiras" className="footer-link">
-            Lixeiras disponíveis
-          </Link>
-          <Link href="/residencial/coleta-volumosos" className="footer-link">
-            Coleta de volumosos
-          </Link>
+          {residentialItems.map((item) => (
+            <Link key={item.href} href={item.href} className="footer-link">
+              {item.footerLabel ?? item.label}
+            </Link>
+          ))}
         </div>
         <div>
           <h3 className="footer-title">Comercial</h3>
-          <Link href="/comercial/coleta-comercial" className="footer-link">
-            Coleta comercial
-          </Link>
-          <Link href="/comercial/residuos-industriais" className="footer-link">
-            Resíduos industriais
-          </Link>
-          <Link href="/comercial/conteineres-roll-on" className="footer-link">
-            Contêineres Roll-On
-          </Link>
+          {corporateServices.map((item) => (
+            <Link key={item.href} href={item.href} className="footer-link">
+              {item.label}
+            </Link>
+          ))}
           <Link href="/comercial/setores" className="footer-link">
             Soluções por setor
           </Link>

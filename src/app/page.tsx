@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       <section className="bg-[#f4f8f2]">
-        <div className="section-shell py-16">
+        <div className="section-shell py-10 sm:py-16">
           <span className="eyebrow mb-5">Soluções ambientais completas</span>
           <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-wm-dark shadow-sm">
             <Image
@@ -54,32 +54,32 @@ export default function HomePage() {
               className="h-auto w-full object-contain"
               sizes="(min-width: 1440px) 1360px, calc(100vw - 40px)"
             />
-            <div className="bg-white p-7 md:absolute md:inset-0 md:flex md:items-start md:bg-transparent md:p-10 lg:p-14">
-              <div className="max-w-3xl bg-transparent p-7 [text-shadow:0_3px_12px_rgba(0,0,0,0.98),0_1px_2px_rgba(0,0,0,1)] sm:p-9">
-                <h1 className="font-display text-4xl font-black leading-[1.05] text-wm-gold [text-shadow:0_3px_12px_rgba(0,0,0,0.95),0_1px_2px_rgba(0,0,0,1)] sm:text-5xl lg:text-5xl">
+            <div className="bg-white p-5 sm:p-7 md:absolute md:inset-0 md:flex md:items-start md:bg-transparent md:p-10 lg:p-14">
+              <div className="max-w-3xl bg-transparent p-0 md:p-7 md:[text-shadow:0_3px_12px_rgba(0,0,0,0.98),0_1px_2px_rgba(0,0,0,1)]">
+                <h1 className="font-display text-3xl font-black leading-[1.05] text-wm-dark [text-shadow:none] sm:text-4xl md:text-5xl md:text-wm-gold md:[text-shadow:0_3px_12px_rgba(0,0,0,0.95),0_1px_2px_rgba(0,0,0,1)]">
                   Tem resíduos?
                   <br />
                   <span className="text-wm-gold">Nós cuidamos de tudo.</span>
                 </h1>
-                <p className="mt-5 max-w-xl text-base font-medium leading-7 text-white lg:text-lg lg:leading-8">
+                <p className="mt-5 max-w-xl text-base font-medium leading-7 text-slate-700 md:text-white lg:text-lg lg:leading-8">
                   Da coleta ao destino final, a NCF Ambiental planeja, transporta e trata seus
                   resíduos com segurança, regularidade e responsabilidade ambiental.
                 </p>
               </div>
             </div>
           </div>
-          <div className="mt-5 flex flex-wrap gap-3">
-            <QuoteButton>
+          <div className="mt-5 grid gap-3 sm:flex sm:flex-wrap">
+            <QuoteButton className="primary-cta justify-center">
               Solicitar atendimento <ArrowRight />
             </QuoteButton>
-            <Link href="/sobre" className="secondary-cta">
+            <Link href="/sobre" className="secondary-cta text-center">
               Conheça a NCF
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-slate-100 bg-white py-20">
+      <section className="border-b border-slate-100 bg-white py-14 sm:py-20">
         <div className="section-shell grid items-center gap-12 lg:grid-cols-2">
           <div>
             <span className="eyebrow">Área de atendimento</span>
@@ -98,7 +98,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell py-16">
+      <section className="section-shell py-12 sm:py-16">
         <div className="grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
             <ServiceChoice key={service.href} {...service} />
@@ -106,7 +106,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell py-24">
+      <section className="section-shell py-16 sm:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <span className="eyebrow">Gestão integrada</span>
@@ -127,7 +127,7 @@ export default function HomePage() {
           <Image
             src={fleet}
             alt="Frota operacional da NCF Ambiental"
-            className="h-[440px] w-full rounded-2xl border border-slate-200 object-cover"
+            className="h-64 w-full rounded-2xl border border-slate-200 object-cover sm:h-80 lg:h-[440px]"
           />
         </div>
       </section>
@@ -149,7 +149,7 @@ function ServiceChoice({
   cover?: boolean;
 }) {
   return (
-    <article className="group flex min-h-[340px] flex-col border-b border-slate-200 p-7 last:border-0 md:border-r xl:border-b-0">
+    <article className="group flex min-h-[320px] flex-col border-b border-slate-200 p-5 last:border-0 sm:p-7 md:min-h-[340px] md:border-r xl:border-b-0">
       <Image
         src={image}
         alt={title}

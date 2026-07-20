@@ -19,7 +19,7 @@ export default function PageHero({
 }) {
   return (
     <section className="bg-[#f3f7f1]">
-      <div className="section-shell grid min-h-[520px] items-center gap-10 py-16 lg:grid-cols-2">
+      <div className="section-shell grid items-center gap-10 py-12 sm:py-16 lg:min-h-[520px] lg:grid-cols-2">
         <div>
           <span className="eyebrow">{eyebrow}</span>
           <h1 className="section-title max-w-2xl">{title}</h1>
@@ -31,7 +31,7 @@ export default function PageHero({
           </div>
         </div>
         <div
-          className={`relative min-h-[340px] overflow-hidden rounded-2xl shadow-sm ${imageFit === "contain" ? "bg-white" : ""}`}
+          className={`relative min-h-[260px] overflow-hidden rounded-2xl shadow-sm sm:min-h-[340px] ${imageFit === "contain" ? "bg-white" : ""}`}
         >
           <Image
             src={image}

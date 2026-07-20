@@ -56,7 +56,7 @@ export default function Page() {
         <div className="section-shell">
           <span className="eyebrow">Nossa operação em imagens</span>
           <h2 className="section-title">Estrutura, frota e unidades</h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {gallery.map((item) => (
               <article
                 key={item.label}
