@@ -4,4 +4,53 @@ import { CheckList, Specs } from "@/components/ContentBlocks";
 import compactor from "@/assets/images/caminhao coletor balanca.jpeg";
 
 export const metadata: Metadata = { title: "Coleta comercial" };
-export default function Page() { return <><PageHero eyebrow="Serviço corporativo" title="Coleta comercial sob medida" description="Coleta com caminhão compactador e frequência programada para pequenos, médios e grandes estabelecimentos." image={compactor} imageAlt="Caminhão compactador da NCF Ambiental" /><section className="section-shell py-20"><div className="grid gap-12 lg:grid-cols-2"><div><span className="eyebrow">Operação programada</span><h2 className="section-title">Regularidade para o seu negócio</h2><p className="section-copy">Dimensionamos a frequência, os horários e os recipientes conforme o perfil de geração, evitando acúmulo e interferência na rotina da empresa.</p><CheckList items={["Plano de coleta por volume e frequência", "Caminhão compactador", "Horários combinados com a operação", "Destinação final adequada"]} /></div><Specs items={[{ title: "Indicado para", text: "Lojas, mercados, escritórios, hotéis, restaurantes e empresas." }, { title: "Resíduos", text: "Resíduos sólidos urbanos e comerciais compatíveis com a coleta." }, { title: "Frequência", text: "Pontual, semanal ou recorrente, conforme avaliação." }, { title: "Dimensionamento", text: "A equipe recomenda recipientes e frequência após conhecer a demanda." }]} /></div></section></>; }
+export default function Page() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Serviço corporativo"
+        title="Coleta comercial sob medida"
+        description="Coleta com caminhão compactador e frequência programada para pequenos, médios e grandes estabelecimentos."
+        image={compactor}
+        imageAlt="Caminhão compactador da NCF Ambiental"
+      />
+      <section className="section-shell py-20">
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <span className="eyebrow">Operação programada</span>
+            <h2 className="section-title">Regularidade para o seu negócio</h2>
+            <p className="section-copy">
+              Dimensionamos a frequência, os horários e os recipientes conforme o perfil de geração,
+              evitando acúmulo e interferência na rotina da empresa.
+            </p>
+            <CheckList
+              items={[
+                "Plano de coleta por volume e frequência",
+                "Caminhão compactador",
+                "Horários combinados com a operação",
+                "Destinação final adequada",
+              ]}
+            />
+          </div>
+          <Specs
+            items={[
+              {
+                title: "Indicado para",
+                text: "Lojas, mercados, escritórios, hotéis, restaurantes e empresas.",
+              },
+              {
+                title: "Resíduos",
+                text: "Resíduos sólidos urbanos e comerciais compatíveis com a coleta.",
+              },
+              { title: "Frequência", text: "Pontual, semanal ou recorrente, conforme avaliação." },
+              {
+                title: "Dimensionamento",
+                text: "A equipe recomenda recipientes e frequência após conhecer a demanda.",
+              },
+            ]}
+          />
+        </div>
+      </section>
+    </>
+  );
+}

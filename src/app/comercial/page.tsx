@@ -1,2 +1,4 @@
 import { redirect } from "next/navigation";
-export default function CommercialPage() { redirect("/comercial/coleta-comercial"); }
+export default function CommercialPage() {
+  redirect("/comercial/coleta-comercial");
+}
